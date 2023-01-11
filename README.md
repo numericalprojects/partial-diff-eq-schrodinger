@@ -61,14 +61,23 @@ $p(x_j, t_n) = |Ψ(x_j,t_n)|^2 = Re(\psi_j^n)^2 + (Im \psi_j^n)^2$
 We will put the wavefunction in a box from $ -L to L$ and set $V(x) = 0$. We implicitly have a boundary condition that the wavefunction vanishes at the boundaries. 
 We set $\hbar = m = 1$. Let's have the initial wave function be a gaussian: $Ψ(x,t = 0) = (2\pi\sigma^2)^{-1/4}exp(\frac{-(x-x_0)^2}{4\sigma^2})$. 
 The input for these parameters will be received via namelist: 
+
 The size of the box : length
+
 The number of sample points in : n_points
+
 The number of time steps: n_steps
+
 The size of the time step : delta_t
+
 The width of the Gaussian wave function : width
+
 The center of the Gaussian wave function : center
-The oscillator parameter : k_oscillator (For the advanced project below)
+
+The oscillator parameter : k_oscillator (For the next part)
+
 A file name for the results as a function of time: time_file
+
 A file name for the results of the probability density: density_file 
 
 After reading the input parameters the program will sample the lattice points. This will allow us to set the initial wave function to the Gaussian expressed above. Then the code will construct the time evolution matrix: 
